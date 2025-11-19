@@ -1,21 +1,111 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-gaming-black: #050505;
+  --color-gaming-white: #ededed;
+  --color-gaming-brown: #2c1a12;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  --background: var(--color-gaming-black);
+  --foreground: var(--color-gaming-white);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Sharp Edges Utility */
+* {
+  border-radius: 0 !important;
+}
+
+/* Dither Effect Utility */
+.dither-bg {
+  background-image: radial-gradient(var(--color-gaming-brown) 1px, transparent 1px);
+  background-size: 4px 4px;
+  opacity: 0.15;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+}
+
+.dither-overlay {
+  background: repeating-linear-gradient(45deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5) 2px,
+      transparent 2px,
+      transparent 4px);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.dither-text {
+  background: linear-gradient(180deg,
+      var(--color-gaming-white) 0%,
+      rgba(240, 240, 240, 0.7) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.2);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee2 {
+  animation: marquee2 25s linear infinite;
+}
+
+/* Scanline Animation */
+@keyframes scan {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 100%;
+    opacity: 0;
   }
 }
 

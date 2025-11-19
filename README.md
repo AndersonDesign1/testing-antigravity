@@ -1,6 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Neural Nexus
+
+A premium, futuristic landing page for an AI Gaming Studio, featuring high-end aesthetics, dither effects, and interactive elements.
+
+## 🤖 Built with Antigravity & Gemini 3
+
+This project serves as a demonstration of the capabilities of **Antigravity** working alongside **Gemini 3**. 
+
+- **One Mega Prompt**: The core structure, design system, and components were generated from a single, comprehensive prompt.
+- **Minimal Adjustments**: The entire project required **less than 10 follow-up adjustments**, primarily focused on specific features such as:
+    - Generating the Social Media (OG) Image
+    - Refining Light & Dark Mode theming
+    - Minor visual tweaks
+
+It showcases how rapid and high-quality development can be achieved with advanced AI agentic coding tools.
 
 ## Getting Started
+
+This is a [Next.js](https://nextjs.org) project.
 
 First, run the development server:
 
@@ -16,9 +32,13 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework**: Next.js 15
+- **Styling**: Tailwind CSS
+- **Font**: Inter & JetBrains Mono
+- **Theme**: next-themes (Dark/Light mode)
+- **Icons**: Lucide React
 
 ## Learn More
 
@@ -27,10 +47,4 @@ To learn more about Next.js, take a look at the following resources:
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+(This is the only thing I did manually in this entire codebase, I let Antigravity handle everything else. when I say this I mean this paragraph.)
